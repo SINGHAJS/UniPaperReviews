@@ -1,10 +1,16 @@
-function App() {
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./home/pages/Home";
+import { Reviews } from "./reviews/pages/Reviews";
 
+function App() {
   return (
     <>
-      <h1 className="font-bold">UniPaperReview</h1> 
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/paper-reviews" element={<Reviews />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

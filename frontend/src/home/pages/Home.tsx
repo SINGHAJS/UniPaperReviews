@@ -9,8 +9,10 @@ export const Home = () => {
     <div>
       <AppNavigation />
       <div className="w-screen flex flex-col items-center justify-start">
-        <div className="flex justify-start items-center w-2/5 bg-white bg-opacity-80 mt-12 px-8 rounded-t-lg">
-          <h1 className="text-4xl font-bold text-black">UniPaperReviews</h1>
+        <div className="flex justify-start items-center w-2/5 bg-white mt-12 px-8 rounded-t-lg">
+          <h1 className="text-xl md:text-3xl font-bold text-black">
+            UniPaperReviews
+          </h1>
           <Lottie
             animationData={PaperPlaneAnimation}
             loop={true}
@@ -18,8 +20,8 @@ export const Home = () => {
             style={{ height: "10rem", width: "10rem" }}
           />
         </div>
-        <div className="w-2/5 bg-white bg-opacity-80 p-8 rounded-b-lg">
-          <p className="text-md font-bold text-justify">
+        <div className="w-2/5 bg-white p-8 rounded-b-lg">
+          <p className="text-sm md:text-md font-bold text-justify">
             Empower yourself with informed decisions by accessing reviews and
             insights from past students, ensuring you select the most suitable
             academic papers tailored to your educational needs.

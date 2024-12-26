@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 type TCButton = {
   children: ReactNode;
   className?: string;
-  onClick?: () => void;
+  onClick?: (e : React.MouseEvent<HTMLButtonElement>) => void;
 } ;
 
 export const CButton: React.FC<TCButton> = ({ children, className, onClick, ...props }) => {

@@ -2,9 +2,20 @@ import Lottie from "lottie-react";
 import PaperPlaneAnimation from "../../assets/animations/paper_plane_animation.json";
 import { AppNavigation } from "../../shared/components/Navigation/AppNavigation";
 import { CButton } from "../../shared/uiElements/CButton";
-import MessyDoodle from "../../assets/illustrations/MessyDoodle.svg";
+// import MessyDoodle from "../../assets/illustrations/MessyDoodle.svg";
+import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { NewReview } from "../../reviews/pages/NewReview";
 
 export const Home = () => {
+  const [showNewReviewModal, setShowNewReviewModal] = useState(false);
+
+  const navigate = useNavigate(); 
+
+  const onButtonClickHandler = () => {
+    navigate('/paper-reviews');
+  }
+
   return (
     <div>
       <AppNavigation />
@@ -27,9 +38,10 @@ export const Home = () => {
             academic papers tailored to your educational needs.
           </p>
           <div className="flex justify-start items-center gap-2 my-2">
-            <CButton>View Reviews</CButton>
-            <CButton>Write a Review</CButton>
+            <CButton onClick={onButtonClickHandler}>View Reviews</CButton>
+            <CButton onClick={() => setShowNewReviewModal(!showNewReviewModal)}>Write a Review</CButton>
           </div>
+          {showNewReviewModal && <NewReview/> }
           {/* <div className="flex items-center justify-center mt-16">
             <img src={MessyDoodle} width={"400"} />
           </div> */}

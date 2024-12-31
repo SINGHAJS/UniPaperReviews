@@ -24,8 +24,6 @@ export const NewReview: React.FC = () => {
     const name = e.currentTarget.name;
     const value = e.currentTarget.value;
 
-    console.log(value)
-
     setFormData((prevData) => {
       return {
         ...prevData,
